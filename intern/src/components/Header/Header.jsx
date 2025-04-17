@@ -7,7 +7,7 @@ const Header = () => {
         <header className='shadow sticky z-50 top-0 my-4'>
             <nav className='bg-black border-gray-200 px-4 lg:px-6 py-2.5'>
                 <div className='flex flex-wrap justify-between items-center mx-auto max-w-screen-xl'>
-                    <Link to="/" className='inline-flex items-center text-4xl font-bold text-white'>Cod<span className='text-3xl text-orange-600'><RxHamburgerMenu style={{ strokeWidth: "1px", marginTop: "4px" }} /></span>r</Link>
+                    <Link to="/" className='inline-flex items-center text-4xl font-bold text-white'>Cod<span className='text-3xl text-orange-600'><RxHamburgerMenu style={{ strokeWidth: "1px", marginTop: "10px" }} /></span>r</Link>
                     <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
                         <ul className='flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0'>
                             <li>
