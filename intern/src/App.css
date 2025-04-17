@@ -1,1 +1,83 @@
 @import "tailwindcss";
+
+body {
+    background-color: black;
+}
+
+
+
+@keyframes pulseBorder {
+    0%, 100% {
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 70%;
+      border-color: rgb(138, 34, 3);
+    }
+    25% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      border-color: rgb(54, 23, 5);
+    }
+    75% {
+      border-radius: 70% 40% 60% 30% / 40% 70% 50% 60%;
+    }
+  }
+
+
+
+
+
+  .container {
+    display: grid;
+    /* width:auto, */
+    height:100vh;
+    place-items: center;
+    overflow: hidden;
+    background-color: black;
+    --circleDiameter: 300px;
+    --planets: calc(var(--circleDiameter) / 5)
+}
+.hero-circle {
+    position:relative;
+    width: var(--circleDiameter);
+    height: var(--circleDiameter)
+}
+
+.inner-img {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius:10px;
+    width:90px;
+    height:90px;
+  }
+
+  .hero-rotate {
+    position: relative;
+    top: -7px;
+    left:-7px;
+    width: 100%;
+    height: 100%;
+    border: 7px solid white;
+    border-radius: 100%;
+    animation: rotate 30s linear infinite;
+}
+
+.planet {
+    position: absolute;
+    width: var(--planets);
+    height: var(--planets);
+    border-radius: 100%;
+    animation: maintain 30s linear infinite;
+}
+
+.planet>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    animation: scale 1s linear infinite alternate; 
+}
