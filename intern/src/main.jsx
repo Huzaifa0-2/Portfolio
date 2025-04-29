@@ -7,6 +7,7 @@ import Contact from './components/Contact/Contact'
 import Admin from './components/Admin/Admin'
 import Login from './components/Admin/Login/Login'
 import Work from './components/Work/Work'
+import ProtectedRoutes from './utils/ProtectedRoutes.jsx'
 // import About from './components/About/About'
 import { createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
@@ -20,7 +21,11 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="login" element={<Login />} />
       <Route path="work" element={<Work />} />
+
+      <Route element={<ProtectedRoutes />}>
       <Route path="admin" element={<Admin />} />
+      </Route>
+      
       {/* <Route
         loader={githubInfoLoader}
         path='github'

@@ -31,6 +31,7 @@ const Login = () => {
 
             if (userData.email === email && userData.password === password) {
                 console.log("Login successful");
+                localStorage.setItem("userData", JSON.stringify(userData));
                 navigate("/admin");
             }
 

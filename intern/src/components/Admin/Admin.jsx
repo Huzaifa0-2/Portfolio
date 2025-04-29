@@ -7,6 +7,7 @@ const Admin = () => {
   const [projectData, setProjectData] = useState({
     title: '',
     githubLink: '',
+    livelink: '',
     description: ''
   });
   const [skillData, setSkillData] = useState({
@@ -43,6 +44,7 @@ const Admin = () => {
       setProjectData({
         title: '',
         githubLink: '',
+        livelink: '',
         description: ''
       });
     } catch (error) {
@@ -133,6 +135,19 @@ const Admin = () => {
                     id="githublink"
                     value={projectData.githubLink}
                     onChange={(e) => setProjectData({ ...projectData, githubLink: e.target.value })}
+                    className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all"
+                  />
+                </div>
+               
+                <div className="mb-8">
+                  <label htmlFor="livelink" className="block text-sm font-medium text-white mb-1">
+                    Drop Live Project Link
+                  </label>
+                  <input
+                    type="text"
+                    id="livelink"
+                    value={projectData.liveLink}
+                    onChange={(e) => setProjectData({ ...projectData, liveLink: e.target.value })}
                     className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all"
                   />
                 </div>

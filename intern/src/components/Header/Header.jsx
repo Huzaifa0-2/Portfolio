@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => {
+    const [currentUser, setCurrentUser] = useState("")
+    const user = JSON.parse(localStorage.getItem("userData"));
+
+    useEffect(() => {
+        setCurrentUser(user)
+    }, [user])
+
     return (
         <header className='shadow sticky z-50 top-0 my-4'>
             <nav className='bg-black border-gray-200 px-4 lg:px-6 py-2.5'>
@@ -20,11 +27,30 @@ const Header = () => {
                                     className={({ isActive }) => `${isActive ? 'text-orange-600' : 'text-white'} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`}
                                     to="/contact">Contact</NavLink>
                             </li>
-                            <li>
-                                <NavLink
-                                    className={({ isActive }) => `${isActive ? 'text-orange-600' : 'text-white'} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`}
-                                    to="/login">Admin login</NavLink>
-                            </li>
+                            {currentUser ? (
+                                <li>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            `${isActive ? 'text-orange-600' : 'text-white'} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`}
+                                        to="/login"
+                                        onClick={() => {
+                                            localStorage.removeItem("userData");
+                                        }}
+                                    >
+                                        Logout
+                                    </NavLink>
+                                </li>
+                            ) : (
+                                <li>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            `${isActive ? 'text-orange-600' : 'text-white'} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`}
+                                        to="/login"
+                                    >
+                                        Admin login
+                                    </NavLink>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>

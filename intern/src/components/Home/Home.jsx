@@ -21,14 +21,14 @@ const Home = () => (
                 </div>
             </div>
 
-            <div class="relative w-100 h-100 ml-20 -mt-10">
-              <div class="absolute inset-0 rounded-[40%_60%_70%_30%_/_40%_50%_60%_70%]">
-                <div class="absolute inset-0 border-200 h-[480px] border-orange-400/70 animate-[pulseBorder_8s_ease-in-out_infinite]"></div>
-                    <div class="absolute -inset-10 overflow-hidden h-full mt-5 rounded-[38%_58%_68%_32%_/_38%_48%_58%_68%]">
+            <div className="relative w-100 h-100 ml-20 -mt-10">
+              <div className="absolute inset-0 rounded-[40%_60%_70%_30%_/_40%_50%_60%_70%]">
+                <div className="absolute inset-0 border-200 h-[480px] border-orange-400/70 animate-[pulseBorder_8s_ease-in-out_infinite]"></div>
+                    <div className="absolute -inset-10 overflow-hidden h-full mt-5 rounded-[38%_58%_68%_32%_/_38%_48%_58%_68%]">
                   <img 
                     src="mypic2.png" 
                     alt="Profile"
-                    class="w-full h-full object-cover border-opacity-100"
+                    className="w-full h-full object-cover border-opacity-100"
                   />
                 </div>
               </div> 
