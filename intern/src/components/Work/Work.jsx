@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 
 const Work = () => {
+  
+
+
   useEffect(() => {
     const letters = document.querySelectorAll('.letter-animate');
     letters.forEach((letter, index) => {
@@ -33,7 +36,7 @@ const Work = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-orange-500 opacity-10 blur-3xl"></div>
       </div>
 
-  
+
     </div>
   );
 };
