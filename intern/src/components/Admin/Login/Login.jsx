@@ -53,8 +53,8 @@ const Login = () => {
         <div>
             <div className="min-h-screen bg-black">
                 <div className="flex items-center justify-center p-4">
-                    <form onSubmit={getData} className="w-full max-w-md bg-neutral-950 rounded-xl shadow-md border-2 border-orange-600 overflow-hidden p-8 mt-30">
-                        <h2 className="text-2xl font-bold text-center text-white mb-6"><span className='text-orange-600'>A</span>dmin Login</h2>
+                    <form onSubmit={getData} className="w-full max-w-md bg-neutral-950 rounded-xl shadow-[0_0_50px_5px_rgba(251,191,36,0.3)] border-4 border-orange-400 overflow-hidden p-8 mt-30">
+                        <h2 className="text-2xl font-bold text-center bg-gradient-to-r from-orange-400 to-amber-200 bg-clip-text text-transparent">Admin Login</h2>
 
                         <div className="mb-6">
                             <label htmlFor="email" className="block text-sm font-medium text-white mb-1">
@@ -65,7 +65,7 @@ const Login = () => {
                                 type="text"
                                 id="email"
                                 placeholder="Enter admin username"
-                                className="placeholder:text-gray-700 w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all"
+                                className="placeholder:text-gray-700 w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all"
                             />
                         </div>
 
@@ -78,13 +78,13 @@ const Login = () => {
                                 type="password"
                                 id="password"
                                 placeholder="Enter your password"
-                                className="placeholder:text-gray-700 w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all"
+                                className="placeholder:text-gray-700 w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all"
                             />
                         </div>
 
                         <button
                             type="submit"
-                            className="w-full hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg border border-orange-600 shadow-md shadow-orange-600 transition duration-200 hover:shadow-none"
+                            className="w-full bg-neutral-900 hover:bg-gradient-to-br hover:from-orange-500 hover:to-amber-200 text-white font-semibold py-3 px-4 rounded-lg border border-orange-400 shadow-md shadow-orange-400 transition duration-200 hover:shadow-none"
                         >
                             Sign In
                         </button>
