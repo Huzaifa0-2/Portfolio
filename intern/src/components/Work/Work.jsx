@@ -22,7 +22,7 @@ const Work = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 bg-black">
-      {/* Hero Banner - Only change for sm and below */}
+
       <div className='relative mb-10 w-full max-w-4xl'>
         <div className="w-full">
           <img 
@@ -32,13 +32,13 @@ const Work = () => {
           />
         </div>
         <div className='absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center'>
-          <div className='w-80 bg-neutral-800 rounded-lg border-4 border-orange-400 shadow-md shadow-amber-400 overflow-hidden text-white text-center p-20'>
-            <h3 className='text-2xl'>20<span className='text-orange-400'>+</span> Projects</h3>
+          <div className='w-40 h-40 md:w-80 bg-neutral-800 rounded-lg border-4 border-orange-400 shadow-md shadow-amber-400 overflow-hidden text-white text-center flex items-center justify-center'>
+            <h3 className='text-sm md:text-2xl'>20<span className='text-orange-400'>+</span> Projects</h3>
           </div>
         </div>
       </div>
 
-      {/* Title */}
+      
       <div className="text-center mb-16 z-10">
         <svg 
           className="w-12 h-12 inline text-orange-400 mb-4" 
@@ -54,7 +54,7 @@ const Work = () => {
         <p className="text-gray-400">Powered by Firebase</p>
       </div>
 
-      {/* Projects Grid - Only change card size for sm and below */}
+      
       <div className="w-full max-w-6xl z-10 mb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
           {projects.map((project, index) => (
