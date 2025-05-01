@@ -95,7 +95,7 @@ const Home = () => {
                         </div>
 
                         {/* CV Download Card h-40 sm:h-48 w-64 sm:w-72*/}
-                        <div className=" absolute -bottom-7 -right-8 sm:-bottom-10 sm:-right-10 md:-right-20 group hover:-rotate-3 transition-transform duration-500">
+                        <div className=" absolute -bottom-7 -right-8 sm:-bottom-10 sm:-right-10 md:-right-20 group hover:-rotate-6 transition-transform duration-500">
                             <div className="relative h-35 w-52 md:h-48 md:w-72 bg-black/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-orange-600/50 shadow-neon-orange hover:shadow-neon-orange-hover">
                                 <div className="text-orange-400 mb-3 sm:mb-4">
                                     <span className="text-2xl sm:text-3xl font-bold">Jr</span>
