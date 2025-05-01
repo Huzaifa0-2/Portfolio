@@ -108,6 +108,13 @@ const Admin = () => {
   return (
     <div>
       <div className="min-h-screen bg-black">
+        <a
+        href='/login'
+        className='flex items-center justify-center'>
+        <button 
+        onClick={localStorage.removeItem("userData")}
+        className='text-center bg-red-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded '>Logout</button>
+        </a>
         <h1 className="text-5xl font-bold text-center text-white -mb-22">
           <span className="text-orange-600">Admin </span>Panel
         </h1>
@@ -261,7 +268,7 @@ const Admin = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-orange-500 opacity-10 blur-3xl animate-pulse"></div>
       </div>
 
-      {/* Projects Grid */}
+    
       <div className="w-full max-w-6xl z-10 mb-20 mx-auto mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
           {projects.map((project, index) => (
@@ -269,7 +276,7 @@ const Admin = () => {
               key={index}
               className="group relative bg-neutral-900 rounded-xl overflow-hidden border border-neutral-800 hover:border-orange-600 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20"
             >
-              {/* Project Image Placeholder - you can replace with actual images */}
+       
               <div className="h-48 bg-gradient-to-r from-neutral-800 to-neutral-700 flex items-center justify-center">
                 <svg className="w-16 h-16 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -295,7 +302,7 @@ const Admin = () => {
                 </div>
               </div>
 
-              {/* Hover effect border */}
+           
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-orange-500 rounded-xl pointer-events-none transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
             </div>
           ))}
