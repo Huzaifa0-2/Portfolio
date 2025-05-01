@@ -32,6 +32,10 @@ const Admin = () => {
       });
       setEditProjectId(id); // Save the ID for updating
     }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const getData = async () => {
@@ -185,7 +189,7 @@ const Admin = () => {
                   <input
                     type="text"
                     id="livelink"
-                    value={projectData.liveLink}
+                    value={projectData.livelink}
                     onChange={(e) => setProjectData({ ...projectData, liveLink: e.target.value })}
                     className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all"
                   />
