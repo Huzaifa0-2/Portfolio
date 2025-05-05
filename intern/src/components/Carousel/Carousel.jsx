@@ -24,14 +24,14 @@ const Carousel = () => {
 
     return (
         // <div className='text-white border-2 border-red-400'>
-        <div className='m-10'>
+        <div className='m-10 mx-auto'>
             <h1 className='mx-auto text-lg md:text-3xl font-bold mb-2 md:mb-4 text-center w-50 md:w-100 bg-gradient-to-r from-orange-500 to-amber-300 text-transparent bg-clip-text'>
                 Certifications</h1>
-            <div className='opacity-100 relative w-50 h-40 md:w-170 md:h-120 rounded-xl mx-auto flex items-center justify-center'>
+            <div className='relative w-70 h-50 md:w-170 md:h-120 mx-auto rounded-xl flex items-center justify-center'>
 
                 <img
                     onClick={previousImage}
-                    className='w-2 md:w-9 z-10 absolute left-2 bg-gray-800 opacity-30 rounded-full px-2 py-2 cursor-pointer'
+                    className='w-5 md:w-9 z-10 absolute left-0 md:left-2 bg-gray-800 opacity-30 rounded-full px-2 py-2 cursor-pointer'
                     src='previousarrow.png' />
 
                 <AnimatePresence mode="wait">
@@ -53,16 +53,16 @@ const Carousel = () => {
 
                 <img
                     onClick={nextImage}
-                    className='z-10 w-2 md:w-9 absolute right-2 bg-gray-800 opacity-30 rounded-full px-2 py-2 cursor-pointer'
+                    className='z-10 w-5 md:w-9 absolute  right-0 md:right-2 bg-gray-800 opacity-30 rounded-full px-2 py-2 cursor-pointer'
                     src='nextarrow.png' />
                 
-                <div className='absolute flex justify-center items-center gap-2 md:gap-4 top-42 md:top-125'>
+                <div className='absolute flex justify-center items-center gap-2 md:gap-4 top-53 md:top-125'>
 
                 {images.map((image, index) => (
                     <div 
                     key={index}
                     onClick={() => setCurrentImage(index)}
-                    className={`h-1 md:h-2 rounded-2xl ${index === currentImage ? "bg-gray-800 w-4 md:w-12" : "bg-gray-300 w-2 md:w-6"}`}
+                    className={`h-1.5 md:h-2 rounded-2xl ${index === currentImage ? "bg-gray-800 w-8 md:w-12" : "bg-gray-300 w-4 md:w-6"}`}
                     ></div>
                 ))}
                 </div>
