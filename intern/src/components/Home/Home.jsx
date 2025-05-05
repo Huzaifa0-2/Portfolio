@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { db } from "../../Config/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import Carousel from '../Carousel/Carousel';
 
 const Home = () => {
     const [projects, setProjects] = useState([]);
@@ -58,10 +59,10 @@ const Home = () => {
                         <span className="text-white"> Huzaifa Riaz</span>
                     </h1>
                     <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg md:text-xl">A Professional Web Developer and UI/UX Designer</p>
-                    
+
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                        <Link 
-                            to="/work" 
+                        <Link
+                            to="/work"
                             className="px-6 sm:px-8 py-2 sm:py-3 bg-gradient-to-br from-orange-400 hover:bg-amber-200 text-white rounded-lg transition-all duration-300 shadow-neon-orange-hover text-sm sm:text-base"
                         >
                             My Work
@@ -107,12 +108,12 @@ const Home = () => {
                                 >
                                     Download CV
                                     <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M22.1 77.9a4 4 0 0 1-4 4H26.1a4 4 0 0 1 0-8H73.9a4 4 0 0 1 4 4ZM35.2 47.2a4 4 0 0 0-5.7 0L22.1 52.3V22.1a4 4 0 1 1 8 0V52.3l5.1-5.1a4 4 0 0 1 5.7 0 4 4 0 0 1 0 5.6l-12 12a3.9 3.9 0 0 1-5.6 0l-12-12a4 4 0 0 1 0-5.6Z"/>
+                                        <path d="M22.1 77.9a4 4 0 0 1-4 4H26.1a4 4 0 0 1 0-8H73.9a4 4 0 0 1 4 4ZM35.2 47.2a4 4 0 0 0-5.7 0L22.1 52.3V22.1a4 4 0 1 1 8 0V52.3l5.1-5.1a4 4 0 0 1 5.7 0 4 4 0 0 1 0 5.6l-12 12a3.9 3.9 0 0 1-5.6 0l-12-12a4 4 0 0 1 0-5.6Z" />
                                     </svg>
                                 </a>
                                 <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 opacity-30 group-hover:opacity-50 transition-opacity duration-300">
                                     <svg className="w-24 h-24 sm:w-32 sm:h-32 fill-current text-orange-400" viewBox="0 0 64 64">
-                                        <path d="M50.4 51C40.5 49.1 40 46 40 44v-1.2a18.9 18.9 0 0 0 5.7-8.8h0.1c3 0 3.8-6.3 3.8-7.3s0.1-4.7-3-4.7C53 4 30 0 22.3 6c-5.4 0-5.9 8-3.9 16-3.1 0-3 3.8-3 4.7s0.7 7.3 3.8 7.3c1 3.6 2.3 6.9 4.7 9v1.2c0 2 0.5 5-9.5 6.8S2 62 2 62h60a14.6 14.6 0 0 0-11.6-11z"/>
+                                        <path d="M50.4 51C40.5 49.1 40 46 40 44v-1.2a18.9 18.9 0 0 0 5.7-8.8h0.1c3 0 3.8-6.3 3.8-7.3s0.1-4.7-3-4.7C53 4 30 0 22.3 6c-5.4 0-5.9 8-3.9 16-3.1 0-3 3.8-3 4.7s0.7 7.3 3.8 7.3c1 3.6 2.3 6.9 4.7 9v1.2c0 2 0.5 5-9.5 6.8S2 62 2 62h60a14.6 14.6 0 0 0-11.6-11z" />
                                     </svg>
                                 </div>
                             </div>
@@ -150,7 +151,7 @@ const Home = () => {
                                     </div>
                                 ))}
 
-                                <div className="absolute inset-0 rounded-full border-2 border-dashed border-orange-500/20 animate-pulse-border"/>
+                                <div className="absolute inset-0 rounded-full border-2 border-dashed border-orange-500/20 animate-pulse-border" />
                             </div>
                         </div>
 
@@ -159,7 +160,7 @@ const Home = () => {
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-orange-500 to-amber-300 bg-clip-text text-transparent text-center lg:text-left">
                                 My Skills in Web Development
                             </h2>
-                            
+
                             <div className="space-y-4 sm:space-y-6">
                                 {projects.map((project, index) => (
                                     <div key={index} className="group relative">
@@ -172,7 +173,7 @@ const Home = () => {
                                             </span>
                                         </div>
                                         <div className="w-full bg-gray-800 rounded-full h-2 sm:h-3 shadow-inner">
-                                            <div 
+                                            <div
                                                 className="bg-gradient-to-r from-orange-600 to-amber-600 h-2 sm:h-3 rounded-full transition-all duration-500 ease-out group-hover:shadow-neon-orange"
                                                 style={{ width: `${project.level}%` }}
                                             />
@@ -184,6 +185,10 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+
+
+<Carousel/>
 
             <style jsx global>{`
                 @keyframes pulse-border {

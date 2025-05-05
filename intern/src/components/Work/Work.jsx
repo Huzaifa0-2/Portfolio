@@ -33,7 +33,7 @@ const Work = () => {
         </div>
         <div className='absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center'>
           <div className='w-40 h-40 md:w-80 bg-neutral-800 rounded-lg border-4 border-orange-400 shadow-md shadow-amber-400 overflow-hidden text-white text-center flex items-center justify-center'>
-            <h3 className='text-sm md:text-2xl'>20<span className='text-orange-400'>+</span> Projects</h3>
+            <h3 className='text-sm md:text-2xl'>12<span className='text-orange-400'>+</span> Projects</h3>
           </div>
         </div>
       </div>
