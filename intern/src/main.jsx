@@ -7,6 +7,7 @@ import About from './components/About/About'
 import Admin from './components/Admin/Admin'
 import Login from './components/Admin/Login/Login'
 import Work from './components/Work/Work'
+import Message from './components/Message/Message'
 import Carousel from './components/Carousel/Carousel'
 import ProtectedRoutes from './utils/ProtectedRoutes.jsx'
 // import About from './components/About/About'
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       {/* <Route path="about" element={<About />} /> */}
       <Route path="about" element={<About />} />
+      <Route path="message" element={<Message />} />
       <Route path="login" element={<Login />} />
       <Route path="work" element={<Work />} />
       <Route path="carousel" element={<Carousel />} />

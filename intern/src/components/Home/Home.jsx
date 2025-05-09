@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { db } from "../../Config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Carousel from '../Carousel/Carousel';
+import Message from '../Message/Message';
 
 const Home = () => {
     const [projects, setProjects] = useState([]);
@@ -187,8 +188,8 @@ const Home = () => {
             </div>
 
 
-
-<Carousel/>
+<Message />
+            <Carousel />
 
             <style jsx global>{`
                 @keyframes pulse-border {
