@@ -46,9 +46,9 @@ const Message = () => {
                     {/* Title Section */}
                     <motion.div 
                         ref={titleRef} 
-                        initial={{ x: -200, opacity: 0, rotateY: 100 }}
+                        initial={{ opacity: 0, x: 200, rotateY: 100 }}
                         animate={titleControls}
-                        transition={{ type: "spring", stiffness: 70, damping: 30, duration: 1 }}
+                        transition={{ type: "spring", stiffness: 60, damping: 25, duration: 1 }}
                         className="w-full md:w-1/2"
                     >
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-white text-center lg:pr-30 lg:text-left">
